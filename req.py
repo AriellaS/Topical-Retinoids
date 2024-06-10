@@ -10,7 +10,7 @@ url2015 = "https://data.cms.gov/data-api/v1/dataset/5da1b683-99ea-4734-8216-66ff
 url2014 = "https://data.cms.gov/data-api/v1/dataset/2af61f9c-327c-4a23-8b7f-15e38b56e25a/data.csv"
 url2013 = "https://data.cms.gov/data-api/v1/dataset/92d814bd-e2fb-48c2-95e7-a4b388a2c4be/data.csv"
 
-urls = [url2021, url2019, url2018, url2017, url2016, url2015, url2014, url2013]
+urls = [url2021, url2020, url2019, url2018, url2017, url2016, url2015, url2014, url2013]
 drugs = ["tretinoin", "adapalene", "tazarotene", "trifarotene", "alitretinoin", "bexarotene"]
 
 for drug in drugs:
@@ -25,7 +25,7 @@ for drug in drugs:
         url += "&column=Prscrbr_Type,Brnd_Name,Gnrc_Name,Tot_Clms,Tot_30day_Fills,Tot_Day_Suply,Tot_Drug_Cst"
         res = requests.get(url)
 
-        file = open("data/" + drug + "_" + str(year) + ".csv", 'wb')
+        file = open("rawdata/" + drug + "_" + str(year) + ".csv", 'wb')
         file.write(res.content)
         file.close()
 

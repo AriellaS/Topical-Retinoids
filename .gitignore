@@ -1,2 +1,7 @@
-/data
+/rawdata
 .DS_store
+/data_bySpecialty
+/data_byBrand
+*.docx
+*.xlsx
+*.swp
